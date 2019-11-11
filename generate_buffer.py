@@ -6,12 +6,12 @@ import os
 
 import utils
 import DDPG
-
+import pybulletgym
 
 if __name__ == "__main__":
 	
 	parser = argparse.ArgumentParser()
-	parser.add_argument("--env_name", default="Hopper-v1")				# OpenAI gym environment name
+	parser.add_argument("--env_name", default="HopperPyBulletEnv-v0")			# OpenAI gym environment name
 	parser.add_argument("--seed", default=0, type=int)					# Sets Gym, PyTorch and Numpy seeds
 	parser.add_argument("--buffer_size", default=1e5, type=float)		# Max time steps to run environment for
 	parser.add_argument("--noise1", default=0.3, type=float)			# Probability of selecting random action

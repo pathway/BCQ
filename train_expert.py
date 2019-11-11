@@ -6,13 +6,14 @@ import os
 
 import utils
 import DDPG
+import pybulletgym
 
 # Shortened version of code originally found at https://github.com/sfujim/TD3
 
 if __name__ == "__main__":
 	
 	parser = argparse.ArgumentParser()
-	parser.add_argument("--env_name", default="Hopper-v1")				# OpenAI gym environment name
+	parser.add_argument("--env_name", default="HopperPyBulletEnv-v0")				# OpenAI gym environment name
 	parser.add_argument("--seed", default=0, type=int)					# Sets Gym, PyTorch and Numpy seeds
 	parser.add_argument("--max_timesteps", default=1e6, type=float)		# Max time steps to run environment for
 	parser.add_argument("--start_timesteps", default=1e3, type=int)		# How many time steps purely random policy is run for
